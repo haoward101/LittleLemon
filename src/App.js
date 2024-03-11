@@ -1,7 +1,11 @@
+import 
 function App() {
-  <div className='App'>
-    Homepage
-  </div>
+  return (
+  <Header/>
+  <Nav/>
+  <Main/>
+  <Footer/>
+  )
 }
 
 export default App;
