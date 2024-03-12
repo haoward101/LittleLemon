@@ -3,14 +3,16 @@ import React from 'react';
 function Nav () {
 return(
     <div>
-        <img src="/Logo.svg" alt="Logo"/>
+        <a href='#'>
+            <img src="/Logo.svg" alt="Logo"/>
+        </a>
         <ul>
-            <li><a>Home</a></li>
-            <li><a>About</a></li>
-            <li><a>Menu</a></li>
-            <li><a>Reservation</a></li>
-            <li><a>Order Online</a></li>
-            <li><a>Login</a></li>
+            <li><a href='#'>Home</a></li>
+            <li><a href='#'>About</a></li>
+            <li><a href='#'>Menu</a></li>
+            <li><a href='#'>Reservation</a></li>
+            <li><a href='#'>Order Online</a></li>
+            <li><a href='#'>Login</a></li>
         </ul>
     </div>
 )
