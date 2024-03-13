@@ -9,6 +9,7 @@ import {
 
 
 function Nav() {
+    // adding styles to list items and hover
     const listyle = {
         style: {
             display: 'inline-block',
@@ -22,6 +23,7 @@ function Nav() {
         }
     }
 
+    //adding styles to anchor
     const astyle = {
         color: 'inherit',
         textDecoration: 'none',
