@@ -13,7 +13,7 @@ function Nav() {
     const listyle = {
         style: {
             display: 'inline-block',
-            padding: '0px 35px',
+            padding: '0px 40px',
             textTransform: 'uppercase',
         },
         hover:{

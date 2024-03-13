@@ -1,25 +1,54 @@
-function Footer () {
+import {
+    Image,
+    Stack,
+    ListItem,
+    UnorderedList,
+    Link,
+} from '@chakra-ui/react'
+
+function Footer() {
+    const style = {
+        ul: {
+            listStyle: 'none',
+            fontFamily: 'Markazi Text',
+            fontSize: '16px',
+            fontWeight: '500'
+        },
+        link:{
+            fontFamily:'Karla',
+            fontWeight:'400',
+            fontSize: '12px'
+        }
+    }
+
     return (
-        <div>
-            <img src="./Logo.svg" alt="Logo"/>
-            <ul> Doormat Navigation
-                <li><a>Home</a></li>
-                <li><a>About</a></li>
-                <li><a>Reservations</a></li>
-                <li><a>Order Online</a></li>
-                <li><a>Login</a></li>
-            </ul>
-            <ul> Contact
-                <li>Address</li>
-                <li>Phone Number</li>
-                <li>Email</li>
-            </ul>
-            <ul> Social Media Links
-                <li><a href="https://www.facebook.com" rel="facebook">Facebook</a></li>
-                <li><a href="https://www.instagram.com" rel="instagram">Instagram</a></li>
-                <li><a href="https://www.yelp.com" rel="yelp">Yelp</a></li>
-            </ul>
-        </div>
+        <Stack
+            direction='row'
+            justifyContent='space-between'
+            padding='25px 200px'
+        >
+            <Image src="./Logo.svg" alt="Logo" />
+            <UnorderedList style={style.ul}>
+                <ListItem padding="10px 0">Doormat Navigation</ListItem>
+                <ListItem><Link style={style.link}>Home</Link></ListItem>
+                <ListItem><Link style={style.link}>About</Link></ListItem>
+                <ListItem><Link style={style.link}>Reservations</Link></ListItem>
+                <ListItem><Link style={style.link}>Order OnListItemne</Link></ListItem>
+                <ListItem><Link style={style.link}>Login</Link></ListItem>
+            </UnorderedList>
+            <UnorderedList style={style.ul}>
+                <ListItem padding="10px 0">Contact</ListItem>
+                <ListItem style={style.link}>Address</ListItem>
+                <ListItem style={style.link}>Phone Number</ListItem>
+                <ListItem style={style.link}>Email</ListItem>
+            </UnorderedList>
+            <UnorderedList style={style.ul}>
+                <ListItem padding="10px 0">Social Media</ListItem>
+                <ListItem><Link href="https://www.facebook.com" rel="facebook" style={style.link}>Facebook</Link></ListItem>
+                <ListItem><Link href="https://www.instagram.com" rel="instagram" style={style.link}>Instagram</Link></ListItem>
+                <ListItem><Link href="https://www.yelp.com" rel="yelp" style={style.link}>Yelp</Link></ListItem>
+            </UnorderedList>
+        </Stack>
     )
 }
 
