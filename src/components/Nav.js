@@ -5,6 +5,10 @@ import {
     UnorderedList,
     ListItem,
     Link,
+    Flex,
+    HStack,
+    Box,
+    Center
 } from '@chakra-ui/react'
 
 
@@ -13,10 +17,10 @@ function Nav() {
     const listyle = {
         style: {
             display: 'inline-block',
-            padding: '0px 40px',
             textTransform: 'uppercase',
+            padding: '0 10px'
         },
-        hover:{
+        hover: {
             color: '#495e57',
             backgroundColor: '#f4ce14',
             borderRadius: '16px'
@@ -29,27 +33,34 @@ function Nav() {
         textDecoration: 'none',
     }
 
+    //list of nav links
+    const navlinks = [
+        {text:'Home', href: '#'},
+        {text:'About', href: '#'},
+        {text:'Menu', href: '#'},
+        {text:'Order Online', href: '#'},
+        {text:'Login', href: '#'}]
+
     return (
-        <Stack
-            direction='row'
+        <Box>
+            <Flex
             fontFamily='Markazi Text'
             fontWeight='500'
             fontSize='16px'
             justifyContent='space-between'
-            alignItems='center'
-            padding='25px 200px'>
-            <a href='#'>
-                <Image src="/Logo.svg" alt="Logo" />
-            </a>
-            <UnorderedList style={{ listStyle: 'none' }}>
-                <ListItem style={listyle.style} _hover={listyle.hover}><Link href='#' style={astyle}>Home</Link></ListItem>
-                <ListItem style={listyle.style} _hover={listyle.hover}><Link href='#' style={astyle}>About</Link></ListItem>
-                <ListItem style={listyle.style} _hover={listyle.hover}><Link href='#' style={astyle}>Menu</Link></ListItem>
-                <ListItem style={listyle.style} _hover={listyle.hover}><Link href='#' style={astyle}>Reservation</Link></ListItem>
-                <ListItem style={listyle.style} _hover={listyle.hover}><Link href='#' style={astyle}>Order Online</Link></ListItem>
-                <ListItem style={listyle.style} _hover={listyle.hover}><Link href='#' style={astyle}>Login</Link></ListItem>
-            </UnorderedList>
-        </Stack>
+            align='center'>
+            <Image src="/Logo.svg" alt="Logo" />
+            <Box>
+                <UnorderedList style={{ listStyle: 'none' }}>
+                    <HStack spacing={25}>
+                    {navlinks.map((item, index) => (
+                        <ListItem key={index} style={listyle.style} _hover={listyle.hover}><Link href={item.href} style={astyle}>{item.text}</Link></ListItem>
+                    ))}
+                    </HStack>
+                </UnorderedList>
+            </Box>
+            </Flex>
+        </Box>
     )
 }
 
