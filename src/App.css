@@ -1,5 +1,9 @@
-.App {
+.App{
   text-align: center;
-  margin: 100px;
 }
 
+@media (min-width: 992px) {
+  .Nav {
+    margin: 100px;
+  }
+}
