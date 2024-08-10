@@ -102,11 +102,11 @@ function Nav() {
                 pos={'fixed'}
                 top={90}>
                     <UnorderedList style={{ listStyle: 'none' }}>
-                        <Flex 
+                        <Flex
                         fontSize='25px'
                         textTransform='uppercase'
                         direction={'column'}
-                        display={menuState ? 'flex' : 'none'}
+                        display={{base: menuState? 'flex' : 'none', md: 'none'}}
                         align={{base:'center'}}>
                             {navlinks.map((item, index) => (
                                 <ListItem
